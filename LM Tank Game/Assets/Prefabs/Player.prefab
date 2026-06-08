@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2019447618502270241}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.078, z: 1.735}
+  m_LocalPosition: {x: 0, y: -0.774, z: 1.735}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -233,7 +233,19 @@ MonoBehaviour:
     m_ActionId: 9fc9e244-9876-454c-a30d-8ffcc8c2b91b
     m_ActionName: 'Keyboard Input/Look[/Keyboard/z,/Keyboard/c]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -3480034685584097562}
+        m_TargetAssemblyTypeName: Shoot, Assembly-CSharp
+        m_MethodName: ShootInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 53e63afe-8117-4f75-a450-1c14ec32bc0e
     m_ActionName: 'Keyboard Input/Fire[/Keyboard/space]'
   m_NeverAutoSwitchControlSchemes: 1
@@ -268,6 +280,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf14ca021dc3d742b2beecfa4c08425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  shootPoint: {fileID: 9038902401283423545}
+  bulletPrefab: {fileID: 8354510332270513962, guid: 72b2cf02b7925d54a85c62d83f5c5d9a, type: 3}
+  shootCooldown: 0.5
 --- !u!1 &3408015409099769870
 GameObject:
   m_ObjectHideFlags: 0
