@@ -16,6 +16,7 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         rb = GetComponent<Rigidbody>();
     }
 
