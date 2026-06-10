@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float turnSpeed;
     [SerializeField] private GameObject Cannon;
 
     public float sensitivity;
@@ -22,7 +23,8 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector3(moveInput.x * moveSpeed, 0f, moveInput.y * moveSpeed);
+        rb.linearVelocity = transform.forward * moveInput.y * moveSpeed;
+        transform.eulerAngles += new Vector3(0, moveInput.x * turnSpeed, 0);
 
         if (!moving)
         {

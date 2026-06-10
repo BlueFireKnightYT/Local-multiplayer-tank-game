@@ -7,6 +7,7 @@ public class MenuManager : MonoBehaviour
     public void StartMatch()
     {
         SceneManager.LoadScene("Gameplay Scene");
+        PlayerInputManager.instance.DisableJoining();
     }
 
     public void QuitGame()
