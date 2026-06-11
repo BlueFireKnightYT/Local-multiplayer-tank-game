@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,9 @@ public class HPandRespawn : MonoBehaviour
     public Transform respawnPoint;
     [SerializeField] Slider hpBar;
 
+    public GameObject respawnTimerTxt;
+
+    bool didCoroutineStart = false;
     private void Start()
     {
         currentHP = maxHP;
@@ -18,10 +22,10 @@ public class HPandRespawn : MonoBehaviour
         if (other.CompareTag("Bullet"))
         {
             currentHP--;
-            if (currentHP <= 0)
+            if (currentHP <= 0 && !didCoroutineStart)
             {
-                currentHP = maxHP;
-                transform.position = respawnPoint.position;
+                didCoroutineStart = true;
+                StartCoroutine(Respawn());
             }
             updateHpBar();
             Debug.Log(currentHP);
@@ -31,5 +35,15 @@ public class HPandRespawn : MonoBehaviour
     private void updateHpBar()
     {
         hpBar.value = currentHP;
+    }
+
+    private IEnumerator Respawn()
+    {
+        currentHP = maxHP;
+        Instantiate(respawnTimerTxt, transform.position, Quaternion.identity);
+        transform.position = new Vector3(-1000, transform.position.y, -1000);
+        yield return new WaitForSeconds(5);
+        transform.position = respawnPoint.position;
+        didCoroutineStart = false;
     }
 }

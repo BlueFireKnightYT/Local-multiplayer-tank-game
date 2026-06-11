@@ -154,7 +154,6 @@ GameObject:
   - component: {fileID: 1956297186606724567}
   - component: {fileID: 8648469545995356653}
   - component: {fileID: 2996408034634403155}
-  - component: {fileID: 8276964249469299053}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -201,7 +200,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
   m_UseReflectionProbes: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -246,18 +245,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &8276964249469299053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2889323139085462164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 030c860a95cf58b49a65f63645a3f69c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!1 &3056992149355803563
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,6 +515,7 @@ MonoBehaviour:
   maxHP: 5
   respawnPoint: {fileID: 0}
   hpBar: {fileID: 8220750213392052666}
+  respawnTimerTxt: {fileID: 2980679329659154677, guid: 3cfa356a2bbd45c499c1bddd761aed5c, type: 3}
 --- !u!1 &3408015409099769870
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,6 +752,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7069903555273515533}
   - component: {fileID: 8220750213392052666}
+  - component: {fileID: 6447763440548429287}
   m_Layer: 5
   m_Name: HP slider
   m_TagString: Untagged
@@ -843,6 +832,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6447763440548429287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8492636274732762104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030c860a95cf58b49a65f63645a3f69c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FacePlayer
+  camTransform: {fileID: 0}
 --- !u!1 &8667804722035077702
 GameObject:
   m_ObjectHideFlags: 0
