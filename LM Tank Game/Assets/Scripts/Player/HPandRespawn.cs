@@ -4,8 +4,6 @@ using UnityEngine.UI;
 
 public class HPandRespawn : MonoBehaviour
 {
-
-
     public int maxHP = 5;
     int currentHP;
 
