@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,7 +26,11 @@ public class Shoot : MonoBehaviour
     {
         if (canShoot)
         { 
-            Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
+            GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
+            BulletScript bulletScript = bullet.GetComponent<BulletScript>();
+
+            bulletScript.player = this.gameObject;
+
             canShoot = false;
             timeRemaining = shootCooldown;
         }

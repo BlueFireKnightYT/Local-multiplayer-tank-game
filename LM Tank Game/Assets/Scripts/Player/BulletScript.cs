@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
+    public GameObject player;
+
     Rigidbody rb;
     [SerializeField] float bulletSpeed = 10f;
     [SerializeField] float destroyTimer = 5f;
