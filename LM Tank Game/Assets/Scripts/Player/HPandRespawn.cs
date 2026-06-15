@@ -52,7 +52,7 @@ public class HPandRespawn : MonoBehaviour
     private IEnumerator Respawn()
     {
         currentHP = maxHP;
-        Instantiate(respawnTimerTxt, transform.position, Quaternion.identity);
+        Instantiate(respawnTimerTxt, transform.position, Quaternion.Euler(45, 0, 0));
         transform.position = new Vector3(-1000, transform.position.y, -1000);
         yield return new WaitForSeconds(5);
         transform.position = respawnPoint.position;

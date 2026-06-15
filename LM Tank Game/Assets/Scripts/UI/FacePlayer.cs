@@ -12,6 +12,6 @@ public class FacePlayer : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.rotation = camTransform.rotation;
+        transform.rotation = Quaternion.Euler(45, camTransform.rotation.y, camTransform.rotation.z);
     }
 }
