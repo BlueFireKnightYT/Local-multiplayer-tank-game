@@ -153,5 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8f2bed80afbc6f4c94048c53cbe01c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletScript
+  player: {fileID: 0}
+  bulletAudioPlayer: {fileID: 7510368390628470848, guid: d72376cc2f5212c4db4506c171310d5e, type: 3}
   bulletSpeed: 20
   destroyTimer: 5

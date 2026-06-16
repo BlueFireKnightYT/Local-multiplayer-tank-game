@@ -1,9 +1,13 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HPandRespawn : MonoBehaviour
 {
+    AudioSource audioSource;
+    public AudioClip playerDeathSound;
+
     public int maxHP = 5;
     int currentHP;
 
@@ -17,7 +21,9 @@ public class HPandRespawn : MonoBehaviour
     private void Start()
     {
         currentHP = maxHP;
+        audioSource = GetComponent<AudioSource>();
     }
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Bullet"))
@@ -51,9 +57,10 @@ public class HPandRespawn : MonoBehaviour
 
     private IEnumerator Respawn()
     {
+        audioSource.PlayOneShot(playerDeathSound);
         currentHP = maxHP;
         Instantiate(respawnTimerTxt, transform.position, Quaternion.Euler(45, 0, 0));
-        transform.position = new Vector3(-1000, transform.position.y, -1000);
+        transform.position = new Vector3(-100, transform.position.y, -100);
         yield return new WaitForSeconds(5);
         transform.position = respawnPoint.position;
         didCoroutineStart = false;
