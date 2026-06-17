@@ -137,7 +137,7 @@
                 {
                     "name": "left",
                     "id": "e00ceab0-73a0-4ddd-8874-703555489d4e",
-                    "path": "<Keyboard>/z",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Player 1 (Keyboard);Keyboard&Mouse",
@@ -148,7 +148,7 @@
                 {
                     "name": "right",
                     "id": "7133ed08-0617-4362-9da4-17c4247a34d5",
-                    "path": "<Keyboard>/c",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Player 1 (Keyboard);Keyboard&Mouse",
