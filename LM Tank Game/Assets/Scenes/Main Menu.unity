@@ -2606,6 +2606,26 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 106512195980955095, guid: 4587e394306e3924aabffa7f2d2c0cfb, type: 3}
+      propertyPath: tankPrefabs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 106512195980955095, guid: 4587e394306e3924aabffa7f2d2c0cfb, type: 3}
+      propertyPath: 'tankPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3056992149355803563, guid: e26e256adafdcc24ca5706efc32a391f, type: 3}
+    - target: {fileID: 106512195980955095, guid: 4587e394306e3924aabffa7f2d2c0cfb, type: 3}
+      propertyPath: 'tankPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 3056992149355803563, guid: 5b9c279c3673bc547883d621316b875f, type: 3}
+    - target: {fileID: 106512195980955095, guid: 4587e394306e3924aabffa7f2d2c0cfb, type: 3}
+      propertyPath: 'tankPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3056992149355803563, guid: e26e256adafdcc24ca5706efc32a391f, type: 3}
+    - target: {fileID: 106512195980955095, guid: 4587e394306e3924aabffa7f2d2c0cfb, type: 3}
+      propertyPath: 'tankPrefabs.Array.data[3]'
+      value: 
+      objectReference: {fileID: 3056992149355803563, guid: 5b9c279c3673bc547883d621316b875f, type: 3}
+    - target: {fileID: 106512195980955095, guid: 4587e394306e3924aabffa7f2d2c0cfb, type: 3}
       propertyPath: 'activityTexts.Array.data[0]'
       value: 
       objectReference: {fileID: 2017998193}
@@ -2621,6 +2641,14 @@ PrefabInstance:
       propertyPath: 'activityTexts.Array.data[3]'
       value: 
       objectReference: {fileID: 241534238}
+    - target: {fileID: 3889569788699939100, guid: 4587e394306e3924aabffa7f2d2c0cfb, type: 3}
+      propertyPath: m_PlayerLeftEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3889569788699939100, guid: 4587e394306e3924aabffa7f2d2c0cfb, type: 3}
+      propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7420299227917599260, guid: 4587e394306e3924aabffa7f2d2c0cfb, type: 3}
       propertyPath: m_Name
       value: Player Input Manager
