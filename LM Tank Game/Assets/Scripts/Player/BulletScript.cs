@@ -6,6 +6,7 @@ public class BulletScript : MonoBehaviour
     Shoot shootScript;
 
     [SerializeField] GameObject bulletAudioPlayer;
+    [SerializeField] GameObject bulletExplosion;
 
     Rigidbody rb;
     [SerializeField] float bulletSpeed = 10f;
@@ -27,6 +28,7 @@ public class BulletScript : MonoBehaviour
     {
         Debug.Log(other.name);
         Instantiate(bulletAudioPlayer, transform.position, Quaternion.identity);
+        Instantiate(bulletExplosion, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
 }

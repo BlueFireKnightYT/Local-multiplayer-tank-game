@@ -166,8 +166,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BulletScript
   player: {fileID: 0}
   bulletAudioPlayer: {fileID: 7510368390628470848, guid: d72376cc2f5212c4db4506c171310d5e, type: 3}
+  bulletExplosion: {fileID: 100004, guid: b46890100828db6429ff69c322b45893, type: 3}
   bulletSpeed: 20
-  destroyTimer: 9999
+  destroyTimer: 6
 --- !u!65 &3968779847459348635
 BoxCollider:
   m_ObjectHideFlags: 0

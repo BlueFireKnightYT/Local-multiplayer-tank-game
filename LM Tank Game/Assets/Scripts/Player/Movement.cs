@@ -15,10 +15,14 @@ public class Movement : MonoBehaviour
 
     private bool moving;
 
+    public AudioSource audioSource;
+    public AudioClip drivingSound;
+
     private void Start()
     {
         DontDestroyOnLoad(this.gameObject);
         rb = GetComponent<Rigidbody>();
+        audioSource.clip = drivingSound;
     }
 
     private void FixedUpdate()
@@ -39,10 +43,15 @@ public class Movement : MonoBehaviour
         if (context.started)
         {
             moving = true;
+            audioSource.loop = true;
+            audioSource.Play();
+
+            
         }
         if (context.canceled)
         {
             moving = false;
+            audioSource.Stop();
         }
     }
 
