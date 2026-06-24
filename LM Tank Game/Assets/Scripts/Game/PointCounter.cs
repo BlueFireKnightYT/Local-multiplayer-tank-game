@@ -58,7 +58,7 @@ public class PointCounter : MonoBehaviour
         //Adds all the players with the highest score to the winnersIndexes list
         for (int i = 0; i < scores.Length; i++)
         {
-            if (scores[i] == highestKillCount)
+            if (scores[i] == highestKillCount && highestKillCount != 0)
             {
                 winnerIndexes.Add(i);     
             }
